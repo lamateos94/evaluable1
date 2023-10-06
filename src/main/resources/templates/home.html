@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+</head>
+<body>
+<img th:src="@{/images/logo.png}" style="max-width: 200px;"></img>
+<br/>
+<p th:text="${parrafo}"></p>
+<br/>
+<p th:text="${parrafo2}"></p>
+<br/>
+<p th:text="${parrafo3}"></p>
+</body>
+
+<ul>
+	<li><a href="http://localhost:8080/asignatura/listado/con">Listado de Asignaturas con alumnos</a></li>
+	<li><a href="http://localhost:8080/asignatura/listado/sin">Listado de Asignaturas</a></li>
+	
+</ul>
+</html>

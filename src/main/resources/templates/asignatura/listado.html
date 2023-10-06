@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+
+<style>
+		table {
+			border-collapse: collapse;
+			margin: 0 auto;
+
+		}
+
+		td,
+		th {
+			border: 1px solid darkgray;
+			padding: 8px;
+			text-align: center;
+		}
+	</style>
+	
+	<h1 th:text="${header}"></h1>
+</head>
+<body>
+<table>
+	<thead>
+		<tr>
+			<td><strong>Id</strong></td>
+			<td><strong>Nombre</strong></td>
+			<td><strong>Tipo</strong></td>
+			<td><strong>Alumnos Matriculados</strong></td>
+			<td><strong>Número de Créditos</strong></td>
+		</tr>
+		<tbody>
+			<tr th:each="Asignatura : ${asignatura}">
+				<td th:text="${Asignatura.id}"><strong>Id</strong></td>
+				<td th:text="${Asignatura.nombre}"><strong>Nombre</strong></td>
+				<td th:text="${Asignatura.tipo}"><strong>Alumnos Matriculados</strong></td>				
+				<td th:text="${Asignatura.numAlumnosMatriculados}"><strong>Alumnos Matriculados</strong></td>
+				<td th:text="${Asignatura.numCreditos}"><strong>Alumnos Matriculados</strong></td>
+				
+				
+			</tr>
+		</tbody>
+	</thead>
+	
+</table>
+</body>
+</html>
